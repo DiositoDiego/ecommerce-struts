@@ -16,7 +16,7 @@ public class ActionReview {
     ResultSet rs;
     final String INSERT_REVIEW = "INSERT INTO reviews (fk_id_sale, date, comment, rate) VALUES (?,?,?,?)";
     final String GET_ALL_REVIEWS = "SELECT * FROM reviews";
-    final String GET_REVIEW_BY_ID = "SELECT * FROM reviews WHERE id_review = ?";//
+    final String GET_REVIEW_BY_ID = "SELECT * FROM reviews WHERE id_review = ?";
     final String UPDATE_REVIEW = "UPDATE reviews SET review = ?, score = ? WHERE id_review = ?";
 
     public boolean createReview(BeanReview review){
