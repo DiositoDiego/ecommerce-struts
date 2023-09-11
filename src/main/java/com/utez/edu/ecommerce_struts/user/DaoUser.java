@@ -35,7 +35,7 @@ public class DaoUser {
             return ps.executeUpdate() > 0;
         }catch(SQLException e){
             Logger.getLogger(DaoUser.class.getName()).log(Level.SEVERE, null, "createUser -> " + e);
-        } finally {
+        } finally {//
             try {
                 if(con != null){
                         con.close();

@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class DaoRole {
+public class DaoRole {//
     Connection con;
     PreparedStatement ps;
     ResultSet rs;

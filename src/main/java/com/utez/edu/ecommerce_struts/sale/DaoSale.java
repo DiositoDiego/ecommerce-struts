@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class DaoSale {
+public class DaoSale {//
     Connection con;
     PreparedStatement ps;
     ResultSet rs;
