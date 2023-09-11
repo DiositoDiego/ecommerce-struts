@@ -18,8 +18,8 @@ public class DaoUser {
 
     final String INSERT_USER = "INSERT INTO users (name, surname, lastname, curp, tuition, institutional_mail, password) VALUES (?,?,?,?,?,?,?)";
     final String GET_ALL_USERS = "SELECT * FROM users";
-    final String GET_USER_BY_ID = "SELECT * FROM users WHERE id = ?";
-    final String UPDATE_USER_BY_ID = "UPDATE users SET name = ?, surname = ?, lastname = ?, curp = ?, tuition = ?, institutional_mail = ?, password = ? WHERE id = ?";
+    final String GET_USER_BY_ID = "SELECT * FROM users WHERE id_user = ?";
+    final String UPDATE_USER_BY_ID = "UPDATE users SET name = ?, surname = ?, lastname = ?, curp = ?, tuition = ?, institutional_mail = ?, password = ? WHERE id_user = ?";
 
     public boolean createUser(BeanUser user) {
         try{
@@ -32,8 +32,7 @@ public class DaoUser {
             ps.setString(5, user.getTuition());
             ps.setString(6, user.getInstitutional_mail());
             ps.setString(7, user.getPassword());
-            rs = ps.executeQuery();
-            return rs.next();
+            return ps.executeUpdate() > 0;
         }catch(SQLException e){
             Logger.getLogger(DaoUser.class.getName()).log(Level.SEVERE, null, "createUser -> " + e);
         } finally {
@@ -131,7 +130,7 @@ public class DaoUser {
             ps.setString(6, user.getInstitutional_mail());
             ps.setString(7, user.getPassword());
             ps.setLong(8, user.getIdUser());
-            return ps.executeUpdate() == 1;
+            return ps.executeUpdate() > 0;
         } catch(SQLException e) {
             Logger.getLogger(DaoUser.class.getName()).log(Level.SEVERE, null, "updateUser -> "+e);
         } finally {

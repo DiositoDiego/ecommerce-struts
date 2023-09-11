@@ -18,7 +18,7 @@ public class DaoSale {
 
     final String INSERT_SALE = "INSERT INTO sales (date, fk_id_user_buyer, fk_id_item) VALUES (?,?,?)";
     final String GET_ALL_SALES = "SELECT * FROM sales";
-    final String GET_SALE_BY_ID = "SELECT * FROM sales WHERE id = ?";
+    final String GET_SALE_BY_ID = "SELECT * FROM sales WHERE id_sale = ?";
 
     public boolean createSale(BeanSale sale) {
         try{
@@ -27,8 +27,7 @@ public class DaoSale {
             ps.setString(1, sale.getDate());
             ps.setLong(2, sale.getFk_id_user_buyer());
             ps.setLong(3, sale.getFk_id_item());
-            rs = ps.executeQuery();
-            return rs.next();
+            return ps.executeUpdate() > 0;
         }catch (SQLException e){
             Logger.getLogger(DaoSale.class.getName()).log(Level.SEVERE, null, "createSale -> " + e);
         } finally {
