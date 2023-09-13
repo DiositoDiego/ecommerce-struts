@@ -1,10 +1,10 @@
 package com.utez.edu.ecommerce_struts.sale;
 
 public class BeanSale {
-    Long id_sale;
-    String date;
-    Long fk_id_user_buyer;
-    Long fk_id_item;
+    private Long id_sale;
+    private String date;
+    private Long fk_id_user_buyer;
+    private Long fk_id_item;
 
     public BeanSale() {
     }

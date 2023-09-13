@@ -1,11 +1,11 @@
 package com.utez.edu.ecommerce_struts.review;
 
 public class BeanReview {
-    Long id_review;
-    String date;
-    Double rate;
-    String comment;
-    Long fk_id_sale;
+    private Long id_review;
+    private String date;
+    private Double rate;
+    private String comment;
+    private Long fk_id_sale;
 
     public BeanReview() {
     }

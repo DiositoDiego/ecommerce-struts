@@ -1,15 +1,15 @@
 package com.utez.edu.ecommerce_struts.user;
 
 public class BeanUser {
-    Long idUser;
-    String name;
-    String lastname;
-    String surname;
-    String curp;
-    String tuition;
-    String institutional_mail;
-    String password;
-    Boolean status;
+    private Long idUser;
+    private String name;
+    private String lastname;
+    private String surname;
+    private String curp;
+    private String tuition;
+    private String institutional_mail;
+    private String password;
+    private Boolean status;
 
     public BeanUser() {
     }

@@ -1,15 +1,15 @@
 package com.utez.edu.ecommerce_struts.item;
 
 public class BeanItem {
-    Long id_item;
-    String image;
-    String name;
-    String description;
-    Double price;
-    String start_availability_date;
-    String end_availability_date;
-    Double rate;
-    Long fk_id_user_seller;
+    private Long id_item;
+    private String image;
+    private String name;
+    private String description;
+    private Double price;
+    private String start_availability_date;
+    private String end_availability_date;
+    private Double rate;
+    private Long fk_id_user_seller;
 
     public BeanItem() {
     }

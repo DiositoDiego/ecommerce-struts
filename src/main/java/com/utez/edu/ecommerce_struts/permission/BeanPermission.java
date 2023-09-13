@@ -1,8 +1,8 @@
 package com.utez.edu.ecommerce_struts.permission;
 
 public class BeanPermission {
-    Long id_permission;
-    String title;
+    private Long id_permission;
+    private String title;
 
     public BeanPermission() {
     }

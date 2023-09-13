@@ -1,16 +1,16 @@
 package com.utez.edu.ecommerce_struts.role;
 
 public class BeanRole {
-    Long id_role;
-    String name;
-    Boolean status;
+    private Long id_role;
+    private String role;
+    private Boolean status;
 
     public BeanRole() {
     }
 
-    public BeanRole(Long id_role, String name, Boolean status) {
+    public BeanRole(Long id_role, String role, Boolean status) {
         this.id_role = id_role;
-        this.name = name;
+        this.role = role;
         this.status = status;
     }
 
@@ -22,12 +22,12 @@ public class BeanRole {
         this.id_role = id_role;
     }
 
-    public String getName() {
-        return name;
+    public String getRole() {
+        return role;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setRole(String role) {
+        this.role = role;
     }
 
     public Boolean getStatus() {

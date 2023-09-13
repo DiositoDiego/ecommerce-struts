@@ -13,7 +13,7 @@ public class ActionUser extends ActionSupport{
 
     public String consultarUsuarios(){
 
-        return "success";
+        return SUCCESS;
     }
 
     public List<BeanUser> getUsers() {
