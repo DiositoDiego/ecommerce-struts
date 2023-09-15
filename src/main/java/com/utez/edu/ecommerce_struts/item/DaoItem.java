@@ -18,6 +18,10 @@ public class DaoItem {
     final String INSERT_ITEM = "INSERT INTO items (image, name, description, price, start_availability_date, end_availability_date, fk_id_user_seller) VALUES (?,?,?,?,?,?,?)";
     final String GET_ALL_ITEMS_BY_SELLER = "SELECT * FROM items WHERE fk_id_user_seller = ? ORDER BY ? LIMIT ? OFFSET ?";
     final String GET_ALL_ITEMS_BY_NAME = "SELECT * FROM items WHERE name LIKE ? ORDER BY ? LIMIT ? OFFSET ?";
+    final String GET_SIX_ITEMS = "SELECT * FROM items ORDER BY RAND() LIMIT 6";
+    final String GET_ALL_ITEMS_ONLY_AVAILABLE = "SELECT * FROM items ORDER BY RAND() WHERE start_availability_date <= NOW() AND end_availability_date >= NOW() LIMIT 6";
+    final String GET_ALL_ITEMS_ONLY_AVAILABLE_BY_SELLER = "SELECT * FROM items WHERE fk_id_user_seller = ? AND start_availability_date <= NOW() AND end_availability_date >= NOW() ORDER BY ? LIMIT ? OFFSET ?";
+    final String GET_ALL_ITEMS_ONLY_AVAILABLE_BY_NAME = "SELECT * FROM items WHERE name LIKE ? AND start_availability_date <= NOW() AND end_availability_date >= NOW() ORDER BY ? LIMIT ? OFFSET ?";
     final String GET_ITEM_BY_ID = "SELECT * FROM items WHERE id_item = ?";
     final String UPDATE_ITEM = "UPDATE items SET image = ?, name = ?, description = ?, price = ?, start_availability_date = ?, end_availability_date = ?, rate = ?, fk_id_user_seller = ? WHERE id_item = ?";
 
